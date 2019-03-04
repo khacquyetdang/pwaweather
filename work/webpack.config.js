@@ -23,9 +23,14 @@ module.exports = {
       swDest: 'service-worker.js'
     }),
     new CopyWebpackPlugin([{
-      from: 'images',
-      to: 'images'
-    }]),
+        from: 'images',
+        to: 'images'
+      },
+      {
+        from: 'manifest.json',
+        to: 'manifest.json'
+      }
+    ]),
   ],
   module: {
     rules: [{
