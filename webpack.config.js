@@ -4,6 +4,7 @@ const WorkboxPlugin = require('workbox-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 var CopyWebpackPlugin = require('copy-webpack-plugin');
+var basePath = process.env.NODE_ENV === 'dev' ? '' : '/pwaweather/';
 module.exports = {
   entry: ['./scripts/app.js', './styles/inline.css'],
   devtool: 'source-map',
@@ -15,7 +16,10 @@ module.exports = {
     new CleanWebpackPlugin(['docs']),
     new HtmlWebpackPlugin({
       title: 'Progressive Web Application',
-      template: 'index.html'
+      template: 'index.html',
+      templateParameters: {
+        basePath: basePath,
+      }
     }),
     new webpack.HotModuleReplacementPlugin(),
     new WorkboxPlugin.InjectManifest({
@@ -41,6 +45,7 @@ module.exports = {
   },
   output: {
     filename: 'app.js',
-    path: path.resolve(__dirname, 'docs')
+    path: path.resolve(__dirname, 'docs'),
+    publicPath: basePath
   }
 };
