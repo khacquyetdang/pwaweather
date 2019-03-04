@@ -8,11 +8,11 @@ module.exports = {
   entry: ['./scripts/app.js', './styles/inline.css'],
   devtool: 'source-map',
   devServer: {
-    contentBase: './dist/',
+    contentBase: './doc/',
     hot: true
   },
   plugins: [
-    //new CleanWebpackPlugin(['dist']),
+    new CleanWebpackPlugin(['doc']),
     new HtmlWebpackPlugin({
       title: 'Progressive Web Application',
       template: 'index.html'
@@ -41,6 +41,6 @@ module.exports = {
   },
   output: {
     filename: 'app.js',
-    path: path.resolve(__dirname, 'dist')
+    path: path.resolve(__dirname, 'doc')
   }
 };
