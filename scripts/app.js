@@ -12,7 +12,8 @@
 // License for the specific language governing permissions and limitations under
 // the License.
 
-import './../styles/inline.css';
+import mystyle from './style';
+
 import {
   app_id,
   consumer_key,

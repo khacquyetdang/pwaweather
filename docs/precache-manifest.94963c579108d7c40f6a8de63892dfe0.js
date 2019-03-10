@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "30f957decfe87643e24697543487c6d6",
+    "revision": "d257526fea8505b00e938661c0921f49",
     "url": "/pwaweather/index.html"
   },
   {
-    "revision": "547924e4b46e510ff79d",
+    "revision": "228eef515986b3cf4b01",
     "url": "/pwaweather/app.js"
   }
 ]);

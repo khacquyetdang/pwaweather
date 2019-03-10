@@ -1,4 +1,4 @@
-importScripts("/pwaweather/precache-manifest.ceae3e1c7419b3b37e8328250d754d1d.js", "https://storage.googleapis.com/workbox-cdn/releases/4.0.0/workbox-sw.js");
+importScripts("/pwaweather/precache-manifest.94963c579108d7c40f6a8de63892dfe0.js", "https://storage.googleapis.com/workbox-cdn/releases/4.0.0/workbox-sw.js");
 
 var cacheName = 'weatherPWA-step-6-2';
 var dataCacheName = 'weatherData-v1';
